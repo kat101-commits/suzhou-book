@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>蘇州古典園林 · Classical Gardens of Suzhou</title>
+<meta name="description" content="A flippable, thread-bound online edition of the booklet Classical Gardens of Suzhou — 蘇州古典園林.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;1,400&amp;family=Noto+Serif+TC:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- section mark from the booklet (quatrefoil window) -->
+    <symbol id="quatrefoil" viewBox="-2 -2 21.88 21.08" overflow="visible">
+      <path d="M17.88 8.53C17.88 11.17 15.99 13.30 13.66 13.30L13.65 13.30L13.65 13.30C13.65 15.39 11.54 17.08 8.94 17.08C6.33 17.08 4.22 15.39 4.22 13.30L4.22 13.30L4.22 13.30C1.89 13.30 0.00 11.17 0.00 8.53C0.00 5.90 1.89 3.76 4.22 3.76L4.23 3.76C4.24 1.68 6.35 0.00 8.94 0.00C11.54 0.00 13.65 1.68 13.66 3.76L13.66 3.76C15.99 3.76 17.88 5.90 17.88 8.53" fill="none" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <!-- fan-shaped lattice window logo from the booklet cover -->
+    <symbol id="fan" viewBox="0 0 145 92"><path d="M140.56 40.64L107.59 87.19C91.64 69.57 57.04 69.17 36.97 87.27L4.00 40.72C26.53 14.82 58.63 4.00 87.71 8.36C108.35 11.46 127.47 22.20 140.56 40.64" fill="none" stroke="currentColor" stroke-width="7.0" stroke-linejoin="miter" stroke-linecap="butt"/><path d="M16.83 57.60L16.83 57.40L16.83 56.89L16.83 29.17M122.35 64.94L22.06 64.94M130.76 29.88L130.76 53.11L130.76 53.30M25.06 23.32L122.02 23.32M87.65 8.77L87.65 34.47L58.61 34.47L58.61 9.58M14.18 53.59L31.33 53.59L31.33 43.29L116.88 43.29L116.88 56.32L128.60 56.32M11.81 33.62L46.05 33.62L46.05 56.11L101.12 56.11L101.12 34.04L134.56 34.04M73.79 22.69L73.79 64.73M87.25 55.90L87.25 64.94M31.54 22.69L31.54 33.41M116.67 23.95L116.67 33.83M56.98 64.52L56.98 75.87M103.01 65.36L103.01 81.54" fill="none" stroke="currentColor" stroke-width="3.0" stroke-linejoin="miter" stroke-linecap="butt"/></symbol>
+    <!-- white silk thread: two-tone twisted strand -->
+    <pattern id="twist" patternUnits="userSpaceOnUse" width="2.6" height="2.6" patternTransform="rotate(58)">
+      <rect width="2.6" height="2.6" fill="#f6f2e8"/>
+      <rect width="1.05" height="2.6" fill="#c9c0ad"/>
+      <rect x="1.05" width=".35" height="2.6" fill="#fffdf7"/>
+    </pattern>
+    <pattern id="twistV" patternUnits="userSpaceOnUse" width="2.6" height="2.6" patternTransform="rotate(-32)">
+      <rect width="2.6" height="2.6" fill="#f3eee3"/>
+      <rect width="1.05" height="2.6" fill="#c4baa6"/>
+    </pattern>
+    <linearGradient id="raise" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".05"/>
+      <stop offset=".85" stop-color="#fff" stop-opacity=".035"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="raise-paper" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".25"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".92" stop-color="#6a4a20" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#6a4a20" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="threadShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation=".7"/>
+    </filter>
+  </defs>
+</svg>
+
+<main id="desk" aria-label="蘇州古典園林 Classical Gardens of Suzhou — book">
+  <div id="scaler"><div id="book"></div></div>
+  <nav id="controls" aria-label="Page navigation">
+    <button id="first" type="button" aria-label="First page 封面"><svg viewBox="0 0 16 16"><path d="M3.5 3v10M12.5 3.5 7 8l5.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button id="prev" type="button" aria-label="Previous page 上一頁"><svg viewBox="0 0 16 16"><path d="M10.5 3.5 5 8l5.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div id="indicator" aria-hidden="true"></div>
+    <button id="next" type="button" aria-label="Next page 下一頁"><svg viewBox="0 0 16 16"><path d="M5.5 3.5 11 8l-5.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button id="last" type="button" aria-label="Last page 封底"><svg viewBox="0 0 16 16"><path d="M12.5 3v10M3.5 3.5 9 8l-5.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </nav>
+  <p id="live" class="sr-only" aria-live="polite"></p>
+</main>
+
+<!-- One template per half-page face, named after its PDF page and half (e.g. pg-4L = PDF page 4, left half).
+     Positions are PDF points measured from the trim box. Blank halves have no template.
+     pg-2L (PDF page 2, left half) is the cover; script.js lays it on the cloth cover with the stitching.
+     Blank halves (2R, 3L, 14R, 15L, 15R) are not part of the book. -->
+<template id="pg-2L">
+<div class="b raw" data-id="2L-1" style="left:376.1px;top:606.0px;width:157.4px"><div class="cover-cap"><span class="cc-en">Classical Gardens of Suzhou</span><span class="cc-zh">蘇州古典園林</span></div></div>
+<img class="ph" src="assets/img/p2l-3.jpg" alt="" style="left:373.78px;top:268.49px;width:131.47px;height:198.58px">
+<img class="ph" src="assets/img/p2l-4.jpg" alt="" style="left:97.57px;top:162.03px;width:131.47px;height:109.47px">
+<svg class="fan" style="left:367.3px;top:491.56px" viewBox="0 0 145 92" aria-hidden="true"><use href="#fan"/></svg>
+</template>
+<template id="pg-3R">
+<div class="b zh" data-id="3R-1" data-h="76" style="left:336.0px;top:472.7px;width:125.8px;line-height:14px">蘇州古典園林是中國造園藝術的巔峰，凝聚了兩千多年的文化與藝術積澱。</div>
+<div class="b lb" data-id="3R-2" style="left:195.0px;top:706.6px;width:128.0px"><div class="lz" style="font-size:10px">聯合國教科文組織世界遺產</div><div class="le tm">UNESCO World Heritage Site</div></div>
+<div class="b lb" data-id="3R-3" style="left:336.0px;top:706.6px;width:27.9px"><div class="lz" style="font-size:10px">中國</div><div class="le tm">China</div></div>
+</template>
+<template id="pg-4L">
+<div class="b tm" data-id="4L-1" data-h="98" style="left:99.0px;top:473.6px;width:129.5px;font-size:9px;line-height:12px">These masterpieces of landscape architecture were primarily built by scholars and wealthy merchants between the 11th and 19th centuries, creating miniature worlds that harmonize human artistry with natural beauty.</div>
+<div class="b tm" data-id="4L-2" data-h="74" style="left:237.0px;top:473.6px;width:131.7px;font-size:9px;line-height:12px">In 1997 and 2000, nine of these gardens were collectively designated as UNESCO World Heritage Sites, recognizing their outstanding universal value to humanity.</div>
+<div class="b raw" data-id="4L-3" style="left:237.0px;top:694.2px;width:136.5px"><div class="zh nb">聯合國教科文組織<br>世界遺產中心</div><div class="tm">7, Place de Fontenoy<br>75352 Paris 07 SP France</div></div>
+<div class="b raw" data-id="4L-4" style="left:375.0px;top:694.2px;width:146.8px"><div class="tm contact"><ruby>電話<rt>Tel</rt></ruby> 33 (0)1 45 68 15 71<br><ruby>傳真<rt>Fax</rt></ruby> 33 (0)1 45 68 55 70<br><ruby>電郵<rt>E-mail</rt></ruby> wh-info@unesco.org<br><ruby>網址<rt>Web</rt></ruby> http://whc.unesco.com</div></div>
+<img class="ph" src="assets/img/p4l-10.jpg" alt="" style="left:99.00px;top:312.12px;width:268.14px;height:149.62px">
+<svg class="ico" style="left:438.06px;top:491.96px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+<svg class="ico" style="left:210.12px;top:702.00px;color:#5c913f" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-4R">
+<div class="b hd" data-id="4R-1" style="left:53.0px;top:118.3px;width:229.6px;color:#a31e22"><div class="hz" style="font-size:24.0px;line-height:30.0px">歷史脈絡</div><div class="he" style="font-size:10px">Historical Context</div></div>
+<div class="b zh" data-id="4R-2" data-h="136" style="left:54.0px;top:192.6px;width:134.9px;line-height:14px">如今，蘇州仍保存著六十九座古典園林，全部列為國家級文物保護單位。其中列入聯合國教科文組織世界遺產的九座園林，是中國「山水園林」的最佳典範，展現了這門獨特藝術的演變歷程。</div>
+<div class="b tm" data-id="4R-3" data-h="62" style="left:195.0px;top:543.4px;width:268.2px;font-size:9px;line-height:12px">The tradition of garden building in Suzhou dates back to the 6th century BCE when the city was founded as the capital of the Wu Kingdom. Initially inspired by royal hunting gardens, private gardens began emerging around the 4th century and reached their peak during the Ming and Qing dynasties (14th-19th centuries).</div>
+<div class="b tm" data-id="4R-4" data-h="74" style="left:336.0px;top:626.4px;width:114.8px;font-size:9px;line-height:12px">The gardens flourished particularly during the mid-Ming to early-Qing period, resulting in approximately 200 private gardens throughout the city.</div>
+<img class="ph" src="assets/img/p4r-9.jpg" alt="" style="left:195.00px;top:352.84px;width:274.13px;height:177.05px">
+<svg class="ico" style="left:53.00px;top:92.42px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-5L">
+<div class="b hd" data-id="5L-1" style="left:236.0px;top:450.5px;width:272.2px;color:#a31e22"><div class="hz" style="font-size:24.0px;line-height:30.0px">世界遺產地位</div><div class="he" style="font-size:10px">UNESCO World Heritage Status</div></div>
+<div class="b tm" data-id="5L-2" data-h="98" style="left:236.5px;top:545.8px;width:252.9px;font-size:9px;line-height:12px">The Classical Gardens of Suzhou were inscribed on the UNESCO World Heritage List in two phases: the first four gardens (Humble Administrator’s Garden, Lingering Garden, Master of Nets Garden, and Mountain Villa with Embracing Beauty) in 1997, followed by five additional gardens in 2000. This prestigious designation recognizes their “outstanding universal value” and places them among humanity’s most significant cultural treasures.</div>
+<div class="b tm" data-id="5L-3" data-h="86" style="left:236.5px;top:653.8px;width:263.4px;font-size:9px;line-height:12px">UNESCO’s citation acknowledges these gardens as “masterpieces of Chinese landscape garden design” that “represent the development of Chinese landscape garden design over more than two thousand years.” The gardens are celebrated for their ability to “recreate natural landscapes in miniature” while embodying “the profound metaphysical importance of natural beauty in Chinese culture.”</div>
+<img class="ph" src="assets/img/p5l-13.jpg" alt="" style="left:373.95px;top:63.00px;width:130.03px;height:203.74px">
+<img class="ph" src="assets/img/p5l-14.jpg" alt="" style="left:373.90px;top:281.59px;width:132.07px;height:94.70px">
+<svg class="ico" style="left:236.00px;top:422.48px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-5R">
+<div class="b gname" data-id="5R-1" style="left:54.0px;bottom:720.5px;width:132.0px;color:#a31e23"><div class="gz">拙政園</div><div class="ge">Humble Administrator’s Garden</div></div>
+<div class="b zh garden" data-id="5R-4" data-h="100" style="left:54.0px;top:99.2px;width:136.3px"><div class="gl"><ruby>建於<rt>Built</rt></ruby>1509年（明代）</div><div class="gl"><ruby>面積<rt>Size</rt></ruby>52,000 m²</div>蘇州規模最大、最負盛名的園林。池水浩渺，亭臺錯落，空間迴環相通，構成一幅宛如傳統山水畫的和諧景致。</div>
+<div class="b gname" data-id="5R-2" style="left:195.0px;bottom:732.5px;width:132.0px;color:#a31e23"><div class="gz">網師園</div><div class="ge">Master of the Nets Garden</div></div>
+<div class="b tm" data-id="5R-3" data-h="110" style="left:195.0px;top:88.1px;width:130.1px;font-size:9px;line-height:12px">Built: 12th Century (Southern Song Dynasty) | Size: 5,400 m² Smallest garden in Suzhou but known for its brilliant spatial design, making a limited space feel much larger. Famous for nighttime performances featuring traditional music and Kunqu opera.</div>
+<div class="b gname" data-id="5R-5" style="left:54.0px;bottom:562.2px;width:132.0px;color:#a31e23"><div class="gz">留園</div><div class="ge">Lingering Garden</div></div>
+<div class="b zh garden" data-id="5R-6" data-h="124" style="left:54.0px;top:256.4px;width:136.9px"><div class="gl"><ruby>建於<rt>Built</rt></ruby>1593年（明代）</div><div class="gl"><ruby>面積<rt>Size</rt></ruby>23,300 m²</div>以繁複的疊石、雅致的亭閣與曲折的迴廊著稱，營造出空間無盡的幻覺。全園分為四區，分別突出山石、水景、花木與建築。</div>
+<div class="b gname" data-id="5R-7" style="left:336.0px;bottom:331.9px;width:132.0px;color:#a31e24"><div class="gz">耦園</div><div class="ge">The Couple’s Retreat Garden</div></div>
+<div class="b tm" data-id="5R-8" data-h="98" style="left:336.0px;top:487.5px;width:136.5px;font-size:9px;line-height:12px">Built: 1874 (Qing Dynasty) | Size: 3,300 m² A romantic garden built for a scholar and his wife, symbolizing companionship and love. Located along the Suzhou canals, allowing visitors to enter by boat.</div>
+<div class="b gname" data-id="5R-9" style="left:195.0px;bottom:219.5px;width:132.0px;color:#a31e24"><div class="gz">獅子林</div><div class="ge">Lion Grove Garden</div></div>
+<div class="b zh garden" data-id="5R-10" data-h="136" style="left:195.0px;top:600.6px;width:131.5px"><div class="gl"><ruby>建於<rt>Built</rt></ruby>1342年（元代）</div><div class="gl"><ruby>面積<rt>Size</rt></ruby>10,000 m²</div>以迷宮般的太湖石假山聞名，石形宛如群獅。園中暗道洞穴密佈，是探幽者的樂園。原為一位僧人為紀念其師而建，將禪宗哲理融入造園。</div>
+<img class="ph" src="assets/img/p5r-15.jpg" alt="" style="left:194.41px;top:212.82px;width:275.24px;height:185.66px">
+<div class="rule" style="left:195.0px;top:80.0px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:54.0px;top:92.0px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:54.0px;top:250.3px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:195.0px;top:593.0px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:336.0px;top:480.6px;width:132.0px;background:#a31e24"></div>
+</template>
+<template id="pg-6L">
+<div class="b hd" data-id="6L-1" style="left:230.0px;top:96.3px;width:246.8px;color:#a31e22"><div class="hz" style="font-size:24.0px;line-height:30.0px">九座世界遺產園林</div><div class="he" style="font-size:10px">The Nine UNESCO-Listed Gardens</div></div>
+<div class="b gname" data-id="6L-2" style="left:90.0px;bottom:583.2px;width:132.0px;color:#a31e23"><div class="gz">滄浪亭</div><div class="ge">Canglang Pavilion</div></div>
+<div class="b gname" data-id="6L-3" style="left:231.0px;bottom:582.4px;width:132.0px;color:#a31e24"><div class="gz">藝圃</div><div class="ge">The Garden of Cultivation</div></div>
+<div class="b zh garden" data-id="6L-5" data-h="100" style="left:231.0px;top:236.6px;width:134.9px"><div class="gl"><ruby>建於<rt>Built</rt></ruby>十六世紀（明代）</div><div class="gl"><ruby>面積<rt>Size</rt></ruby>3,900 m²</div>一處隱逸瑰寶，以寧靜簡約的設計著稱。園林體現道家與儒家思想，空間專為冥想與吟詠而設。</div>
+<div class="b tm" data-id="6L-4" data-h="110" style="left:90.0px;top:237.5px;width:132.9px;font-size:9px;line-height:12px">Built: 1044 (Song Dynasty) | Size: 10,650 m² Oldest surviving garden in Suzhou, emphasizing natural scenery and simplicity. Features a famous pavilion with poetic inscriptions, reflecting the scholarly lifestyle of its original owner.</div>
+<div class="b gname" data-id="6L-6" style="left:89.5px;bottom:322.4px;width:135.1px;color:#a31e24"><div class="gz">退思園</div><div class="ge">The Garden of the Retreat and Reflection</div></div>
+<div class="b tm" data-id="6L-7" data-h="110" style="left:89.5px;top:497.5px;width:133.9px;font-size:9px;line-height:12px">Built: 1885 (Qing Dynasty) | Size: 4,100 m² Located in Tongli, a water town near Suzhou, this garden was built by an official after retiring from politics. Known for its exquisite wood carvings and delicate latticework in the buildings.</div>
+<div class="b gname" data-id="6L-8" style="left:372.0px;bottom:224.0px;width:135.7px;color:#a31e24"><div class="gz">環秀山莊</div><div class="ge">Mountain Villa with Embracing Beauty</div></div>
+<div class="b zh garden" data-id="6L-9" data-h="124" style="left:372.0px;top:595.2px;width:128.6px"><div class="gl"><ruby>建於<rt>Built</rt></ruby>1889年（清代）</div><div class="gl"><ruby>面積<rt>Size</rt></ruby>2,700 m²</div>現位於刺繡博物館內，昔日為一位清代官員的宅邸。尤以假山疊石著稱，令園林顯得遠比實際廣闊。</div>
+<div class="rule" style="left:90.0px;top:490.1px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:231.0px;top:230.1px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:372.0px;top:588.5px;width:132.0px;background:#a31e24"></div>
+<div class="rule" style="left:90.0px;top:229.3px;width:132.0px;background:#a31e24"></div>
+<svg class="ico" style="left:230.00px;top:69.92px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-6R">
+<div class="b tm" data-id="6R-1" data-h="122" style="left:54.0px;top:131.9px;width:134.7px;font-size:9px;line-height:12px">The Classical Gardens of Suzhou have inspired countless poems, paintings, and literary works throughout Chinese history. Famous poets like Bai Juyi, Su Dongpo, and Tang Bohu wrote verses specifically about these gardens, while scholars and artists created paintings depicting their beauty.</div>
+<div class="b tm" data-id="6R-2" data-h="62" style="left:194.9px;top:284.9px;width:136.2px;font-size:9px;line-height:12px">These literary and artistic works have become inseparable from the gardens themselves, adding layers of cultural meaning to the physical spaces.</div>
+<div class="b hd" data-id="6R-3" style="left:194.0px;top:427.2px;width:241.9px;color:#a31e22"><div class="hz" style="font-size:24.0px;line-height:30.0px">園林詩文</div><div class="he" style="font-size:10px">Garden Poetry and Literature</div></div>
+<img class="ph" src="assets/img/p6r-18.jpg" alt="" style="left:193.63px;top:501.72px;width:273.88px;height:210.52px">
+<svg class="ico" style="left:194.00px;top:404.00px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-7L">
+<div class="b tm" data-id="7L-1" data-h="50" style="left:231.2px;top:117.2px;width:257.6px;font-size:9px;line-height:12px">Ponds and streams form the central element in most gardens, symbolizing the life-giving force of nature. The Humble Administrator’s Garden particularly emphasizes water features as its main background.</div>
+<div class="b lb" data-id="7L-2" style="left:90.0px;top:117.1px;width:73.3px;color:#a31e23"><div class="lz" style="font-size:10.5px">水景</div><div class="le sf">Water Features:</div></div>
+<div class="b lb" data-id="7L-3" style="left:90.0px;top:193.7px;width:100.2px;color:#a31e23"><div class="lz" style="font-size:10.5px">廊橋</div><div class="le sf">Corridors and Bridges:</div></div>
+<div class="b tm" data-id="7L-4" data-h="50" style="left:231.2px;top:193.8px;width:258.1px;font-size:9px;line-height:12px">Winding covered walkways connect different areas of the gardens, framing views and providing shelter during inclement weather. The Lingering Garden is known for its corridors that create an illusion of endless space.</div>
+<div class="b lb" data-id="7L-5" style="left:90.0px;top:282.7px;width:50.6px;color:#a31e23"><div class="lz" style="font-size:10.5px">假山</div><div class="le sf">Rockeries:</div></div>
+<div class="b zh" data-id="7L-6" data-h="52" style="left:231.0px;top:281.8px;width:264.5px;line-height:14px">精心堆疊的山石多取自太湖，構築出人造的山巒與洞壑。獅子林以形似群獅的假山聞名，其間暗道與隧洞縱橫。</div>
+<div class="b hd" data-id="7L-7" style="left:229.6px;top:414.8px;width:280.0px;color:#a31e22"><div class="hz" style="font-size:24.0px;line-height:30.0px">建築元素</div><div class="he" style="font-size:10px">Architectural Elements</div></div>
+<div class="b tm" data-id="7L-8" data-h="62" style="left:231.5px;top:603.5px;width:269.2px;font-size:9px;line-height:12px">Carefully selected vegetation includes pine trees (symbolizing longevity), bamboo (representing resilience), plum blossoms (signifying perseverance), and lotus flowers (symbolizing purity). These plants not only beautify the gardens but also carry symbolic meanings.</div>
+<div class="b lb" data-id="7L-9" style="left:90.0px;top:604.5px;width:35.0px;color:#a31e23"><div class="lz" style="font-size:10.5px">花木</div><div class="le sf">Plants:</div></div>
+<div class="b tm" data-id="7L-10" data-h="38" style="left:231.5px;top:692.5px;width:252.9px;font-size:9px;line-height:12px">These structures provide places for contemplation, social gatherings, and artistic pursuits. Each building is strategically placed to offer optimal views of the garden landscape.</div>
+<div class="b lb" data-id="7L-11" style="left:90.2px;top:693.4px;width:86.0px;color:#a31e23"><div class="lz" style="font-size:10.5px">亭臺樓閣</div><div class="le sf">Pavilions and Halls:</div></div>
+<img class="ph" src="assets/img/p7l-27.jpg" alt="" style="left:370.66px;top:463.45px;width:132.34px;height:115.34px">
+<svg class="ico" style="left:229.64px;top:390.46px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-7R">
+<div class="b hd" data-id="7R-1" style="left:194.0px;top:280.4px;width:225.9px;color:#a31e22"><div class="hz" style="font-size:20.0px;line-height:25.0px">文化意義</div><div class="he it" style="font-size:9.5px">Cultural Significance</div></div>
+<div class="b lb" data-id="7R-2a" style="left:54.0px;top:340.8px;width:83.9px;color:#a31e23"><div class="lz" style="font-size:10.5px">文人隱逸</div><div class="le sf">Scholarly Retreat:</div></div>
+<div class="b tm" data-id="7R-2b" data-h="62" style="left:194.5px;top:340.8px;width:133.4px;font-size:9px;line-height:12px">Many gardens were built by retired officials or scholars seeking a peaceful environment for contemplation, study, and artistic pursuits.</div>
+<div class="b lb" data-id="7R-3a" style="left:53.5px;top:428.5px;width:115.1px;color:#a31e23"><div class="lz" style="font-size:10.5px">哲學表達</div><div class="le sf">Philosophical Expression:</div></div>
+<div class="b zh" data-id="7R-3b" data-h="76" style="left:194.8px;top:427.6px;width:137.4px;line-height:14px">園林體現了道家天人合一的理念、儒家的秩序與等級觀念，以及佛家的禪修與覺悟思想。</div>
+<div class="b lb" data-id="7R-4a" style="left:54.0px;top:527.6px;width:87.7px;color:#a31e23"><div class="lz" style="font-size:10.5px">藝術融合</div><div class="le sf">Artistic Integration:</div></div>
+<div class="b tm" data-id="7R-4b" data-h="86" style="left:194.5px;top:527.6px;width:138.0px;font-size:9px;line-height:12px">These gardens represent a synthesis of various art forms including architecture, landscape design, calligraphy, poetry, and painting. Each garden tells a story through its layout and features.</div>
+<div class="b lb" data-id="7R-5" style="left:54.0px;top:626.6px;width:74.3px;color:#a31e23"><div class="lz" style="font-size:10.5px">社交功能</div><div class="le sf">Social Function:</div></div>
+<div class="b tm" data-id="7R-6" data-h="110" style="left:194.9px;top:626.6px;width:130.4px;font-size:9px;line-height:12px">Besides being private retreats, these gardens served as venues for social gatherings, cultural exchanges, and artistic performances. The Master of Nets Garden continues this tradition with its nighttime performances of traditional music and Kunqu opera.</div>
+<img class="ph" src="assets/img/p7r-25.jpg" alt="" style="left:334.95px;top:63.00px;width:132.80px;height:161.76px">
+<img class="ph" src="assets/img/p7r-26.jpg" alt="" style="left:193.97px;top:63.00px;width:134.15px;height:161.76px">
+<svg class="ico" style="left:194.00px;top:253.74px;color:#a31f21" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-8L">
+<div class="b hd" data-id="8L-1" style="left:98.0px;top:339.5px;width:240.4px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">使命宣言</div><div class="he it" style="font-size:10px">Mission Statement</div></div>
+<div class="b zh" data-id="8L-2" data-h="64" style="left:99.0px;top:395.3px;width:257.2px;line-height:14px">聯合國教育、科學及文化組織（UNESCO）致力於鼓勵世界各地識別、保護和保存對全人類具有突出價值的文化與自然遺產。</div>
+<div class="b tm" data-id="8L-3" data-h="74" style="left:237.1px;top:475.7px;width:135.4px;font-size:9px;line-height:12px">This is embodied in an international treaty called the Convention concerning the Protection of the World Cultural and Natural Heritage, adopted by UNESCO in 1972.</div>
+<div class="b tm" data-id="8L-4" data-h="86" style="left:237.2px;top:580.9px;width:110.4px;font-size:9px;line-height:12px">Cultural heritage refers to monuments, groups of buildings, and sites with historical, aesthetic, archaeological, scientific, ethnological, or anthropological value.</div>
+<div class="b tm" data-id="8L-5" data-h="98" style="left:375.2px;top:580.9px;width:124.0px;font-size:9px;line-height:12px">Natural heritage refers to outstanding physical, biological, and geological formations, habitats of threatened species of animals and plants, and areas with scientific, conservation, or aesthetic value.</div>
+<svg class="ico" style="left:98.00px;top:315.92px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-8R">
+<div class="b hd" data-id="8R-1" style="left:53.0px;top:97.0px;width:216.4px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">申報程序</div><div class="he it" style="font-size:10px">The Nomination Process</div></div>
+<div class="b zh" data-id="8R-2" data-h="100" style="left:54.0px;top:208.3px;width:134.7px;line-height:14px">唯有簽署《世界遺產公約》、承諾保護本國自然與文化遺產的國家，方可為其境內的遺產地提交申報，以爭取列入《世界遺產名錄》。</div>
+<div class="b hd" data-id="8R-3" style="left:194.0px;top:478.9px;width:184.3px;color:#5c9240"><div class="hz" style="font-size:14.0px;line-height:17.5px">遴選標準</div><div class="he" style="font-size:8.5px">The criteria for selection</div></div>
+<div class="b tm" data-id="8R-4" data-h="98" style="left:195.0px;top:509.3px;width:270.4px;font-size:9px;line-height:12px">To be included on the World Heritage List, sites must be of outstanding universal value and meet at least one out of ten selection criteria. These criteria are explained in the Operational Guidelines for the Implementation of the World Heritage Convention which, besides the text of the Convention, is the main working tool on World Heritage. The criteria are regularly revised by the Committee to reflect the evolution of the World Heritage concept itself.</div>
+<div class="b tm" data-id="8R-5" data-h="110" style="left:54.0px;top:600.2px;width:129.8px;font-size:9px;line-height:12px">Until the end of 2004, World Heritage sites were selected on the basis of six cultural and four natural criteria. With the adoption of the revised Operational Guidelines for the Implementation of the World Heritage Convention, only one set of ten criteria exists.</div>
+<img class="ph" src="assets/img/p8r-30.jpg" alt="" style="left:193.59px;top:209.48px;width:274.41px;height:251.61px">
+<svg class="ico" style="left:53.00px;top:73.28px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-9L">
+<div class="b hd" data-id="9L-1" style="left:98.0px;top:104.8px;width:278.3px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">世界遺產的使命</div><div class="he it" style="font-size:10px">UNESCO’s World Heritage mission is to:</div></div>
+<div class="b zh" data-id="9L-2" data-h="64" style="left:375.0px;top:208.3px;width:130.9px;line-height:14px">鼓勵各國簽署《世界遺產公約》，並確保其自然與文化遺產得到保護；</div>
+<div class="b tm" data-id="9L-3" data-h="62" style="left:375.0px;top:281.2px;width:130.4px;font-size:9px;line-height:12px">Encourage States Parties to the Convention to nominate sites within their national territory for inclusion on the World Heritage List;</div>
+<div class="b tm" data-id="9L-4" data-h="62" style="left:99.0px;top:469.1px;width:122.1px;font-size:9px;line-height:12px">Assist States Parties in safeguarding World Heritage sites by providing technical assistance and professional training;</div>
+<div class="b tm" data-id="9L-5" data-h="62" style="left:99.0px;top:541.1px;width:135.5px;font-size:9px;line-height:12px">Encourage States Parties to establish management plans and set up reporting systems on the state of conservation of their World Heritage sites;</div>
+<div class="b zh" data-id="9L-6" data-h="40" style="left:237.0px;top:595.4px;width:125.3px;line-height:14px">為面臨迫切危險的世界遺產地提供緊急援助；</div>
+<div class="b tm" data-id="9L-7" data-h="50" style="left:375.0px;top:596.3px;width:120.6px;font-size:9px;line-height:12px">Encourage participation of the local population in the preservation of their cultural and natural heritage;</div>
+<div class="b tm" data-id="9L-8" data-h="50" style="left:237.0px;top:644.3px;width:120.8px;font-size:9px;line-height:12px">Support States Parties’ public awareness-building activities for World Heritage conservation;</div>
+<div class="b tm" data-id="9L-9" data-h="50" style="left:375.0px;top:656.3px;width:132.3px;font-size:9px;line-height:12px">Encourage international cooperation in the conservation of our world’s cultural and natural heritage.</div>
+<img class="ph" src="assets/img/p9l-34.jpg" alt="" style="left:97.85px;top:209.09px;width:269.45px;height:234.57px">
+<svg class="ico" style="left:98.50px;top:80.00px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-9R">
+<div class="b hd" data-id="9R-1" style="left:53.0px;top:95.6px;width:228.8px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">評選標準</div><div class="he it" style="font-size:10px">Selection criteria:</div></div>
+<div class="b tm" data-id="9R-2" data-h="26" style="left:54.0px;top:153.6px;width:123.1px;font-size:9px;line-height:12px">(i) represent a masterpiece of human creative genius;</div>
+<div class="b zh" data-id="9R-3" data-h="100" style="left:54.0px;top:188.7px;width:131.9px;line-height:14px">（二）在一段時期內或世界某一文化區域內，對建築、技術、紀念性藝術、城鎮規劃或景觀設計的發展產生重大影響，展現人類價值的重要交流；</div>
+<div class="b tm" data-id="9R-4" data-h="62" style="left:54.0px;top:297.6px;width:124.3px;font-size:9px;line-height:12px">(iii) bear a unique or at least exceptional testimony to a cultural tradition or to a civilization which is living or which has disappeared;</div>
+<div class="b tm" data-id="9R-5" data-h="110" style="left:336.0px;top:329.7px;width:134.0px;font-size:9px;line-height:12px">(vi) be directly or tangibly associated with events or living traditions, with ideas, or with beliefs, with artistic and literary works of outstanding universal significance. (The Committee considers that this criterion should preferably be used in conjunction with other criteria);</div>
+<div class="b zh" data-id="9R-6" data-h="76" style="left:54.0px;top:368.7px;width:135.8px;line-height:14px">（四）是一種建築、建築群、技術整體或景觀的傑出範例，展現人類歷史上一個（或多個）重要階段；</div>
+<div class="b tm" data-id="9R-7" data-h="110" style="left:54.0px;top:453.6px;width:138.4px;font-size:9px;line-height:12px">(v) be an outstanding example of a traditional human settlement, land-use, or sea-use which is representative of a culture (or cultures), or human interaction with the environment especially when it has become vulnerable under the impact of irreversible change;</div>
+<div class="b tm" data-id="9R-8" data-h="50" style="left:336.0px;top:488.5px;width:129.0px;font-size:9px;line-height:12px">(vii) contain superlative natural phenomena or areas of exceptional natural beauty and aesthetic importance;</div>
+<div class="b tm" data-id="9R-9" data-h="98" style="left:195.0px;top:579.2px;width:129.3px;font-size:9px;line-height:12px">(viii) be outstanding examples representing major stages of earth’s history, including the record of life, significant on-going geological processes in the development of landforms, or significant geomorphic or physiographic features;</div>
+<div class="b tm" data-id="9R-10" data-h="98" style="left:336.0px;top:579.2px;width:134.0px;font-size:9px;line-height:12px">(ix) be outstanding examples representing significant on-going ecological and biological processes in the evolution and development of terrestrial, fresh water, coastal and marine ecosystems and communities of plants and animals;</div>
+<img class="ph" src="assets/img/p9r-33.jpg" alt="" style="left:193.70px;top:330.02px;width:134.41px;height:160.77px">
+<svg class="ico" style="left:53.00px;top:72.32px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-10L">
+<div class="b zh" data-id="10L-1" data-h="100" style="left:99.0px;top:60.6px;width:133.5px;line-height:14px">（十）包含生物多樣性就地保護最重要、最具意義的自然棲息地，包括從科學或保育角度看具有突出普遍價值的瀕危物種棲息地。</div>
+<div class="b tm" data-id="10L-2" data-h="50" style="left:237.0px;top:620.7px;width:123.7px;font-size:9px;line-height:12px">The protection, management, authenticity and integrity of properties are also important considerations.</div>
+<div class="b tm" data-id="10L-3" data-h="62" style="left:375.0px;top:620.7px;width:135.1px;font-size:9px;line-height:12px">Since 1992 significant interactions between people and the natural environment have been recognized as cultural landscapes.</div>
+<img class="ph" src="assets/img/p10l-37.jpg" alt="" style="left:154.48px;top:218.13px;width:286.39px;height:382.37px">
+</template>
+<template id="pg-10R">
+<div class="b hd" data-id="10R-1" style="left:53.0px;top:93.6px;width:196.3px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">簡史</div><div class="he it" style="font-size:10px">A Brief History</div></div>
+<div class="b sf it" data-id="10R-2" data-h="19" style="left:54.0px;top:171.0px;width:39.4px;font-size:14.0px;line-height:16.8px;color:#5c9240">1959</div>
+<div class="b sf it" data-id="10R-3" data-h="19" style="left:195.0px;top:171.0px;width:39.6px;font-size:14.0px;line-height:16.8px;color:#5c9240">1965</div>
+<div class="b sf it" data-id="10R-4" data-h="19" style="left:336.0px;top:171.2px;width:39.7px;font-size:14.0px;line-height:16.8px;color:#5c9240">1966</div>
+<div class="b tm" data-id="10R-5" data-h="86" style="left:54.0px;top:198.7px;width:132.0px;font-size:9px;line-height:12px">UNESCO launches an international campaign and collects US$80 million to save the Abu Simbel temples in the Nile valley. A draft of the convention on the protection of cultural heritage is prepared.</div>
+<div class="b tm" data-id="10R-6" data-h="86" style="left:195.0px;top:198.7px;width:129.3px;font-size:9px;line-height:12px">A White House Conference in Washington, D.C., in 1965 called for a ‘World Heritage Trust’ to protect ‘natural and scenic areas and historic sites.’</div>
+<div class="b zh" data-id="10R-7" data-h="52" style="left:336.0px;top:198.1px;width:128.0px;line-height:14px">聯合國教科文組織發起國際行動，拯救遭受嚴重水災威脅的威尼斯。</div>
+<div class="b sf it" data-id="10R-8" data-h="19" style="left:54.0px;top:331.8px;width:42.6px;font-size:14.0px;line-height:16.8px;color:#5c9240">1962</div>
+<div class="b sf it" data-id="10R-9" data-h="19" style="left:336.0px;top:331.8px;width:40.0px;font-size:14.0px;line-height:16.8px;color:#5c9240">1968</div>
+<div class="b tm" data-id="10R-10" data-h="158" style="left:54.0px;top:359.5px;width:133.1px;font-size:9px;line-height:12px">UNESCO presents its Recommendation on the Safeguarding of the Beauty and Character of Landscapes and Sites. This recommendation covers the preservation and the restoration of the aspect of natural, rural and urban landscapes and sites, whether natural or man-made, which have a cultural or aesthetic interest or form typical natural surroundings.</div>
+<div class="b tm" data-id="10R-11" data-h="38" style="left:336.0px;top:359.5px;width:126.8px;font-size:9px;line-height:12px">IUCN develops a proposal similar to the ‘World Heritage Trust’ for its members.</div>
+<div class="b sf it" data-id="10R-12" data-h="19" style="left:336.0px;top:518.6px;width:34.9px;font-size:14.0px;line-height:16.8px;color:#5c9240">1972</div>
+<div class="b zh" data-id="10R-13" data-h="184" style="left:336.0px;top:545.4px;width:138.0px;line-height:14px">1972年聯合國人類環境會議於瑞典斯德哥爾摩召開；經世界自然保護聯盟、國際古蹟遺址理事會與教科文組織專家小組的努力，各方提案匯成《保護世界文化和自然遺產公約》，於同年11月16日在巴黎教科文組織大會上通過。</div>
+<svg class="ico" style="left:53.00px;top:68.48px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-11L">
+<div class="b sf it" data-id="11L-1a" data-h="19" style="left:99.0px;top:171.4px;width:41.8px;font-size:14.0px;line-height:16.8px;color:#5c9240">1978</div>
+<div class="b tm" data-id="11L-1b" data-h="26" style="left:99.0px;top:194.3px;width:128.2px;font-size:9px;line-height:12px">First twelve sites are inscribed on the World Heritage List.</div>
+<div class="b sf it" data-id="11L-2a" data-h="19" style="left:237.0px;top:171.0px;width:39.7px;font-size:14.0px;line-height:16.8px;color:#5c9240">1994</div>
+<div class="b tm" data-id="11L-2b" data-h="122" style="left:237.0px;top:193.9px;width:133.2px;font-size:9px;line-height:12px">UNESCO launches the Young People’s Participation in World Heritage Preservation and Promotion Project with the aim to develop new educational approaches to mobilize young people in becoming involved in the protection and promotion of heritage.</div>
+<div class="b sf it" data-id="11L-3a" data-h="19" style="left:99.0px;top:331.8px;width:39.3px;font-size:14.0px;line-height:16.8px;color:#5c9240">1992</div>
+<div class="b zh" data-id="11L-3b" data-h="148" style="left:99.0px;top:358.6px;width:133.6px;line-height:14px">適逢《世界遺產公約》通過二十週年，聯合國教科文組織世界遺產中心成立，世界遺產委員會亦增設文化景觀類別，使該公約成為首個認定並保護文化景觀的國際法律文書。</div>
+<div class="b sf it" data-id="11L-4a" data-h="19" style="left:375.0px;top:331.8px;width:41.8px;font-size:14.0px;line-height:16.8px;color:#5c9240">2002</div>
+<div class="b tm" data-id="11L-4b" data-h="38" style="left:375.0px;top:354.7px;width:129.5px;font-size:9px;line-height:12px">The United Nations proclaims 2002 the International Year for Cultural Heritage.</div>
+<div class="b sf it" data-id="11L-5" data-h="19" style="left:99.0px;top:518.6px;width:39.7px;font-size:14.0px;line-height:16.8px;color:#5c9240">1994</div>
+<div class="b sf it" data-id="11L-6" data-h="19" style="left:375.0px;top:518.6px;width:41.8px;font-size:14.0px;line-height:16.8px;color:#5c9240">2002</div>
+<div class="b tm" data-id="11L-7" data-h="194" style="left:375.0px;top:541.5px;width:134.9px;font-size:9px;line-height:12px">To mark the 30th anniversary of the World Heritage Convention, UNESCO, with the help of the Italian Government, organizes in Venice the International Congress “World Heritage: Shared Legacy, Common Responsibility,” with the objective to assess the past 30 years of implementation of the World Heritage Convention and to strengthen partnerships for World Heritage conservation.</div>
+<div class="b tm" data-id="11L-8" data-h="170" style="left:99.0px;top:546.3px;width:129.4px;font-size:9px;line-height:12px">The Global Strategy for a Balanced and Representative World Heritage List is adopted by the World Heritage Committee with the goal of achieving better regional balance and greater thematic diversity in the World Heritage List. It encourages the nomination of sites in underrepresented parts of the world and especially in categories which are not yet fully represented on the List.</div>
+</template>
+<template id="pg-11R">
+<div class="b hd" data-id="11R-1" style="left:53.0px;top:91.5px;width:279.3px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">瀕危世界遺產名錄</div><div class="he it" style="font-size:10px">List of World Heritage Sites in Danger</div></div>
+<div class="b tm" data-id="11R-2" data-h="98" style="left:54.0px;top:171.8px;width:273.9px;font-size:9px;line-height:12px">Armed conflict and war, earthquakes and other natural disasters, pollution, poaching, uncontrolled urbanization and unchecked tourist development pose major problems to World Heritage sites. These can threaten the very characteristics for which a site was originally inscribed on the World Heritage List. Dangers can be ‘ascertained’, referring to specific and proven imminent threats, or ‘potential’, when a property is faced with threats which could have negative effects on its World Heritage values.</div>
+<div class="b hd" data-id="11R-3" style="left:194.0px;top:302.0px;width:308.9px;color:#5c9240"><div class="hz" style="font-size:14.0px;line-height:17.5px">列入瀕危名錄的若干案例：</div><div class="he it" style="font-size:8.5px">Some illustrative cases of sites inscribed on the List of World Heritage in Danger:</div></div>
+<div class="b zh" data-id="11R-4" data-h="76" style="left:195.0px;top:355.2px;width:282.9px;line-height:14px">伊朗巴姆古城堡及其周邊文化景觀，於2003年12月的地震中有二萬六千人罹難；2004年，該地同時列入聯合國教科文組織《世界遺產名錄》與《瀕危世界遺產名錄》。國際社會正全力搶救這座受創城市的文化遺產。</div>
+<div class="b lb" data-id="11R-5" style="left:54.0px;top:356.1px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">伊朗伊斯蘭共和國巴姆城</div><div class="le sf it">City of Bam in the Islamic Republic of Iran:</div></div>
+<div class="b tm" data-id="11R-6" data-h="98" style="left:195.0px;top:440.1px;width:285.7px;font-size:9px;line-height:12px">This cultural landscape was inscribed on the List of World Heritage in Danger in 2003 simultaneously with its inscription on the World Heritage List. The property is in a fragile state of conservation considering that it has suffered from abandonment, military action and dynamite explosions. Parts of the site are inaccessible due to the presence of antipersonnel mines. UNESCO, at the request of the Afghan Government, coordinates all international efforts to safeguard and enhance Afghanistan’s cultural heritage, notably in Bamiyan.</div>
+<div class="b lb" data-id="11R-7" style="left:54.0px;top:440.9px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">阿富汗巴米揚山谷</div><div class="le sf it">Bamiyan Valley in Afghanistan:</div></div>
+<div class="b tm" data-id="11R-8" data-h="134" style="left:195.0px;top:548.1px;width:288.1px;font-size:9px;line-height:12px">The exceptional urban and architectural heritage of Kathmandu, Patan and Bhaktapur has been severely affected by uncontrolled urban development. The property is composed of seven Monument Zones, which, since the time of inscription in 1979, have unfortunately been seriously altered, resulting in a general loss of authenticity and integrity of the property as a whole. For these reasons the site was inscribed on the List of World Heritage in Danger in 2003. UNESCO is working with the Nepalese authorities to help them develop a long-term management plan to conserve the remaining World Heritage values of the property and adopt corrective measures to address illegal building activities.</div>
+<div class="b lb" data-id="11R-9" style="left:54.0px;top:548.5px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">尼泊爾加德滿都谷地</div><div class="le sf it">Kathmandu Valley in Nepal:</div></div>
+<svg class="ico" style="left:53.00px;top:62.00px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-12L">
+<div class="b zh" data-id="12L-1" data-h="148" style="left:237.0px;top:88.6px;width:264.4px;line-height:14px">巴庫城牆古城是位於多元文化交匯處、罕見而傑出的中世紀建築典範。該城在2000年11月的地震中嚴重受損，並日益受到城市開發壓力、保護政策缺失及不當修復的影響，因此於2003年被列入《瀕危世界遺產名錄》。此後，聯合國教科文組織一直與締約國及諮詢機構合作，制定解決保護問題的行動計畫，並與各利益相關方協調落實保護措施。</div>
+<div class="b lb" data-id="12L-2" style="left:100.0px;top:89.5px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">亞塞拜然巴庫城牆古城</div><div class="le sf it">Walled City of Baku in Azerbaijan:</div></div>
+<div class="b tm" data-id="12L-3" data-h="98" style="left:237.0px;top:269.5px;width:273.4px;font-size:9px;line-height:12px">The outstanding archaeological and historical heritage of Zabid has seriously deteriorated in recent years. Indeed, 40% of its original houses have been replaced by concrete buildings. In 2000, at the request of the State Party, the Historic Town of Zabid was inscribed on the List of World Heritage in Danger. UNESCO is helping the local authorities to develop an urban conservation plan and to adopt a strategic approach for the preservation of this World Heritage site.</div>
+<div class="b lb" data-id="12L-4" style="left:99.0px;top:268.4px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">葉門宰比德歷史古城</div><div class="le sf it">Historic Town of Zabid in Yemen:</div></div>
+<div class="b tm" data-id="12L-5" data-h="122" style="left:237.0px;top:401.5px;width:273.5px;font-size:9px;line-height:12px">Commercial and agricultural intrusions into the site threaten the World Heritage values for which it had been inscribed in 1982. The advancing agricultural frontier at the west side of the reserve, pushed by small farmers and cattle ranchers, is already reducing the Reserve’s forest area. The southern and western zones of the Reserve are subject to massive extraction of precious wood such as the caoba. The site was thus inscribed on the List of World Heritage in Danger in 1996. An eleven-point corrective action plan has been elaborated and the management plan for Rio Platano is being carried out with a World Heritage Fund contribution.</div>
+<div class="b lb" data-id="12L-6" style="left:99.0px;top:400.1px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">宏都拉斯里奧普拉塔諾生物圈保護區</div><div class="le sf it">Rio Platano Biosphere Reserve in Honduras:</div></div>
+<div class="b tm" data-id="12L-7" data-h="158" style="left:237.0px;top:557.5px;width:273.4px;font-size:9px;line-height:12px">Since 1994, all five World Heritage sites of the DRC were inscribed on the List of World Heritage in Danger as a result of the impact of the war and civil conflicts in the Great Lakes region. In 1999, an international safeguarding campaign was launched by UNESCO together with a number of international conservation NGOs to protect the habitat of endangered species such as the mountain gorilla, the northern white rhino and the okapi. This resulted in a 4-year US$3.5 million emergency programme to save the five sites, funded by the United Nations Foundation and the Government of Belgium. In 2004, international donors, non-governmental organizations and the governments of Belgium and Japan pledged an additional US$50 million to help the Democratic Republic of the Congo rehabilitate these World Heritage parks.</div>
+<div class="b lb" data-id="12L-8" style="left:99.0px;top:555.6px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">剛果民主共和國五處國家公園及保護區</div><div class="le sf it">National Parks of Garamba, Kahuzi-Biega, Salonga, Virunga and the Okapi Wildlife Reserve in the Democratic Republic of the Congo:</div></div>
+</template>
+<template id="pg-12R">
+<div class="b hd" data-id="12R-1" style="left:53.0px;top:91.3px;width:251.4px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">成功案例</div><div class="he it" style="font-size:10px">SUCCESS STORIES</div></div>
+<div class="b zh" data-id="12R-2" data-h="76" style="left:54.0px;top:140.9px;width:134.2px;line-height:14px">《世界遺產公約》不僅是「紙上文字」，更是保護瀕危遺址與物種的有力行動工具。</div>
+<div class="b tm" data-id="12R-3" data-h="62" style="left:54.0px;top:223.5px;width:131.8px;font-size:9px;line-height:12px">By recognizing the outstanding universal value of a site, States Parties commit to its preservation and strive to find solutions for its protection.</div>
+<div class="b tm" data-id="12R-4" data-h="74" style="left:195.0px;top:223.5px;width:265.1px;font-size:9px;line-height:12px">If a site is inscribed on the List of World Heritage in Danger, the World Heritage Committee can take immediate action to address the situation and this has led to many successful restorations. The World Heritage Convention is also a very powerful tool to rally international attention and actions through international safeguarding campaigns.</div>
+<img class="ph" src="assets/img/p12r-45.jpg" alt="" style="left:193.75px;top:305.57px;width:275.59px;height:275.04px">
+<img class="ph" src="assets/img/p12r-46.jpg" alt="" style="left:193.25px;top:594.61px;width:276.00px;height:113.00px">
+<svg class="ico" style="left:53.00px;top:65.84px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-13L">
+<div class="b hd" data-id="13L-1" style="left:98.0px;top:73.1px;width:226.4px;color:#5c913f"><div class="hz" style="font-size:22px;line-height:27.5px">尋求解決之道</div><div class="he it" style="font-size:8px;margin-top:-2px">Finding Solutions</div></div>
+<div class="b zh" data-id="13L-2" data-h="52" style="left:99.0px;top:108.1px;width:278.8px;line-height:14px">世界遺產委員會與締約國常在聯合國教科文組織專家及其他夥伴協助下，於情況惡化至損害遺產之前找到解決方案。</div>
+<div class="b lb" data-id="13L-3" style="left:99.0px;top:170.0px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">埃及吉薩金字塔</div><div class="le sf it">Giza Pyramids in Egypt:</div></div>
+<div class="b tm" data-id="13L-4" data-h="62" style="left:237.0px;top:170.0px;width:272.0px;font-size:9px;line-height:12px">These pyramids were threatened in 1995 by a highway project near Cairo which would have seriously damaged the values of this archaeological site. Negotiations with the Egyptian Government resulted in a number of alternative solutions which replaced the disputed project.</div>
+<div class="b tm" data-id="13L-5" data-h="122" style="left:237.0px;top:245.5px;width:270.9px;font-size:9px;line-height:12px">This Park provides refuge for about 400 greater one-horned rhinoceros characteristic of South Asia. The World Heritage Committee, in the early 1990s, questioned the findings of the environmental impact assessment of the proposed Rapti River Diversion Project. The Asian Development Bank and the Government of Nepal revised the assessment and found that the River Diversion project would threaten riparian habitats critical to the rhino inside Royal Chitwan. The project was thus abandoned and this World Heritage site was saved for the benefit of future generations.</div>
+<div class="b lb" data-id="13L-6" style="left:98.9px;top:243.0px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">尼泊爾皇家奇特旺國家公園</div><div class="le sf it">Royal Chitwan National Park in Nepal:</div></div>
+<div class="b tm" data-id="13L-7" data-h="50" style="left:237.0px;top:384.6px;width:271.5px;font-size:9px;line-height:12px">At the time of its nomination in 1987, plans were underway to build an aluminium plant nearby the site. The Greek Government was invited to find another location for the plant, which it did, and Delphi took its rightful place on the World Heritage List.</div>
+<div class="b lb" data-id="13L-8" style="left:100.0px;top:384.6px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">希臘德爾斐考古遺址</div><div class="le sf it">Archaeological Site of Delphi in Greece:</div></div>
+<div class="b zh" data-id="13L-9" data-h="124" style="left:237.0px;top:455.1px;width:263.2px;line-height:14px">1999年，世界遺產界發起行動，反對在埃爾比斯卡伊諾灣聖伊格納西奧潟湖將一座鹽場擴建至商業規模——該潟湖是太平洋灰鯨最後一處未受破壞的繁殖地。世界遺產委員會預先警告墨西哥政府：在保護區內設置鹽場，將威脅海洋與陸地生態系統、作為關鍵物種的灰鯨，以及該遺產地的整體完整性。墨西哥政府遂於2000年3月否決了鹽場計畫。</div>
+<div class="b lb" data-id="13L-10" style="left:99.0px;top:456.0px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">墨西哥埃爾比斯卡伊諾鯨魚保護區</div><div class="le sf it">Whale Sanctuary of El Vizcaino in Mexico:</div></div>
+<div class="b lb" data-id="13L-11" style="left:99.0px;top:601.9px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">肯亞山國家公園／自然森林</div><div class="le sf it">Mount Kenya National Park/Natural Forest in Kenya:</div></div>
+<div class="b tm" data-id="13L-12" data-h="110" style="left:237.0px;top:602.0px;width:270.9px;font-size:9px;line-height:12px">The nomination of this site was first referred back to the State Party on the basis of findings during the evaluation that suggested there were serious threats to the site, primarily illegal logging and marijuana cultivation inside the Park. The State Party responded with an action plan which included provision of additional vehicles, increased patrols, community awareness projects, training of forest guards and a review of the policy affecting the adjacent forest reserve. Based on these assurances, the Committee inscribed the site in 1997.</div>
+<div class="b tm" data-id="13L-13" data-h="26" style="left:97.0px;top:729.6px;width:252.9px;font-size:9px;line-height:12px">Today, some threats still remain but there has been significant progress in the management of the site.</div>
+<svg class="ico" style="left:98.00px;top:50.84px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-13R">
+<div class="b hd" data-id="13R-1" style="left:52.0px;top:118.7px;width:292.7px;color:#5c913f"><div class="hz" style="font-size:24.0px;line-height:30.0px">成功修復</div><div class="he it" style="font-size:10px">Successful restorations</div></div>
+<div class="b tm" data-id="13R-2" data-h="170" style="left:195.5px;top:196.6px;width:135.7px;font-size:9px;line-height:12px">One of the most important archaeological sites in South-East Asia, Angkor Archaeological Park contains the magnificent remains of the different capitals of the Khmer Empire, from the 9th to the 15th century. In 1993, UNESCO embarked upon an ambitious plan to safeguard and develop the historical site carried out by the Division of Cultural Heritage in close cooperation with the World Heritage Centre.</div>
+<div class="b zh" data-id="13R-3" data-h="160" style="left:336.0px;top:195.6px;width:136.6px;line-height:14px">盜掘、遺址劫掠與地雷曾是主要問題。世界遺產委員會確認上述威脅已不復存在，且聯合國教科文組織協調的多項保護與修復工作卓有成效，遂於2004年將該地從《瀕危世界遺產名錄》中移除。</div>
+<div class="b lb" data-id="13R-4" style="left:53.0px;top:196.5px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">柬埔寨吳哥</div><div class="le sf it">Angkor in Cambodia:</div></div>
+<div class="b tm" data-id="13R-5" data-h="146" style="left:195.5px;top:420.5px;width:130.4px;font-size:9px;line-height:12px">The ‘pearl of the Adriatic’, dotted with beautiful Gothic, Renaissance and Baroque buildings had withstood the passage of centuries and survived several earthquakes. In November and December 1991, when seriously damaged by artillery fire, the city was immediately included on the List of World Heritage in Danger.</div>
+<div class="b tm" data-id="13R-6" data-h="134" style="left:336.0px;top:420.5px;width:128.8px;font-size:9px;line-height:12px">With UNESCO providing technical advice and financial assistance, the Croatian Government restored the facades of the Franciscan and Dominican cloisters, repaired roofs and rebuilt palaces. As a result, in December 1998, it became possible to remove the city from the List of World Heritage in Danger.</div>
+<div class="b lb" data-id="13R-7" style="left:53.0px;top:420.5px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">克羅埃西亞杜布羅夫尼克古城</div><div class="le sf it">Old City of Dubrovnik in Croatia:</div></div>
+<div class="b tm" data-id="13R-8" data-h="86" style="left:195.0px;top:619.7px;width:135.9px;font-size:9px;line-height:12px">This huge crater with the largest concentration of wild animals in the world was listed as an endangered site in 1984 because of the overall deterioration of the site due to the lack of management.</div>
+<div class="b zh" data-id="13R-9" data-h="76" style="left:336.0px;top:618.8px;width:129.7px;line-height:14px">經持續監測與技術合作，至1989年情況已有改善，該地遂從《瀕危世界遺產名錄》中移除。</div>
+<div class="b lb" data-id="13R-10" style="left:54.0px;top:619.7px;width:132.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">坦尚尼亞聯合共和國恩戈羅恩戈羅保護區</div><div class="le sf it">Ngorongoro Conservation Area in the United Republic of Tanzania:</div></div>
+<svg class="ico" style="left:53.00px;top:98.00px;color:#5c8f18" viewBox="-2 -2 21.88 21.08"><use href="#quatrefoil"/></svg>
+</template>
+<template id="pg-14L">
+<div class="b lb" data-id="14L-1" style="left:69.0px;top:130.3px;width:140.0px;color:#5c9240"><div class="lz" style="font-size:10.5px">波蘭維利奇卡鹽礦</div><div class="le sf it">Wieliczka Salt Mine in Poland:</div></div>
+<div class="b tm" data-id="14L-2" data-h="134" style="left:222.0px;top:130.3px;width:150.7px;font-size:9px;line-height:12px">This property was inscribed in 1978 as one of the first twelve World Heritage sites. This great mine has been actively worked since the 13th century. Its 300 kilometres of galleries contain famous works of art with altars and statues sculpted in salt, all of which were seriously threatened by humidity due to the introduction of artificial ventilation at the end of the nineteenth century.</div>
+<div class="b tm" data-id="14L-3" data-h="134" style="left:377.0px;top:130.3px;width:149.0px;font-size:9px;line-height:12px">The site was placed on the List of World Heritage in Danger in 1989. During nine years of joint efforts by both Poland and the international community, an efficient dehumidifying system was installed, and the Committee, at its session in December 1998, had the satisfaction of removing the site from the List of World Heritage in Danger.</div>
+<img class="ph" src="assets/img/p14l-51.jpg" alt="" style="left:220.54px;top:310.44px;width:301.46px;height:182.19px">
+<img class="ph" src="assets/img/p14l-52.jpg" alt="" style="left:66.19px;top:542.22px;width:148.19px;height:155.51px">
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
