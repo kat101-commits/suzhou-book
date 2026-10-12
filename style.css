@@ -263,6 +263,56 @@ html, body {
 .face.sp-l .fold { right: 0; background: linear-gradient(270deg, rgba(120,100,70,.12), rgba(255,255,255,0)); }
 .face.sp-r .fold { left: 0; background: linear-gradient(90deg, rgba(255,255,255,.5), rgba(255,255,255,0)); }
 
+/* ---------- die-cut lattice leaf (花窗): red paper, openings cut with a CSS mask */
+.face.dcw { background: none; overflow: visible; contain: none; }
+.face.paper.diecut {
+  background-color: #EAA898;   /* a touch redder than the spec's #EDB9AE, as requested */
+  z-index: 1;
+}
+.face.paper.diecut::after {
+  /* same fibre system as the other pages, warmer */
+  background:
+    var(--fibre),
+    linear-gradient(var(--tone-a, 160deg), rgba(230, 150, 120, var(--tone, .03)), rgba(255, 220, 200, 0) 70%);
+  background-size: 558px 420px, auto;
+  opacity: .55;
+}
+.dc-vig {
+  /* slightly deeper toward the edges, with warm variation */
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(120% 95% at 55% 48%, rgba(160, 70, 55, 0) 55%, rgba(160, 70, 55, .16) 100%),
+    radial-gradient(60% 40% at 30% 70%, rgba(255, 210, 190, .10), rgba(255, 210, 190, 0) 70%);
+}
+.dc-bevel, .dc-shadow {
+  position: absolute; inset: 0; pointer-events: none;
+  background-size: 558px 810px; background-repeat: no-repeat;
+}
+.dc-bevel { z-index: 2; }
+.dc-shadow { z-index: 0; }
+
+/* ---------- tracing / mulberry (kozo) paper */
+.face.paper.tracing {
+  background-color: rgba(251, 247, 237, .66);     /* alpha 0.62–0.70: the page beneath reads at ~35–45% contrast */
+  box-shadow: inset 0 0 0 .8px rgba(150, 128, 96, .38), inset 0 0 3px rgba(150, 128, 96, .12);  /* visible edge */
+}
+.face.paper.tracing::before { opacity: .07; }
+.face.paper.tracing::after { opacity: .35; }
+.tr-fibres, .tr-cockle { position: absolute; inset: 0; pointer-events: none; }
+.tr-fibres { background-size: 558px 810px; opacity: .9; }
+.tr-cockle {
+  /* cockle: slow, uneven lighting across the sheet */
+  background:
+    radial-gradient(40% 28% at 28% 22%, rgba(255, 255, 255, .16), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(45% 30% at 74% 58%, rgba(120, 100, 70, .07), rgba(120, 100, 70, 0) 70%),
+    radial-gradient(35% 25% at 40% 86%, rgba(255, 255, 255, .12), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(50% 22% at 80% 12%, rgba(120, 100, 70, .05), rgba(120, 100, 70, 0) 70%);
+}
+.trace-photo { filter: grayscale(1); opacity: .5; }
+.trace-art { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; }
+.face.tracing .ghost { opacity: .28; filter: none; }   /* the other side's art shows through at ~28% */
+.face.tracing .gutter { opacity: calc(var(--gut) * .5); }
+
 /* ---------- typography (positioned blocks from the PDF) */
 .b { position: absolute; margin: 0; }
 .tm { font-family: var(--times); }
@@ -281,6 +331,7 @@ html, body {
   color: var(--ink);
   font-weight: 400;
 }
+.zh .zh-en { margin-top: 6px; text-align: left; letter-spacing: 0; color: var(--ink); }  /* page 1: English under the Chinese */
 .zh.nb { text-align: left; line-height: 13px; margin-bottom: 1px; }
 
 /* bilingual heading: Chinese large, English small beneath */
